@@ -10,6 +10,7 @@ export function Search() {
     const handleSubmit = (e) => {
         e.preventDefault();
     }
+
     return (
         <form className={styles.searchContainer} onSubmit={handleSubmit}>
             <div className={styles.searchBox}>

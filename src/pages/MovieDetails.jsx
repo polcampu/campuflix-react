@@ -12,7 +12,7 @@ export function MovieDetails() {
 
     useEffect(() => {
         setIsLoading(true);
-
+        
         get("/movie/" + movieId).then((data) => {
             setIsLoading(false);
             setMovie(data);
@@ -22,6 +22,8 @@ export function MovieDetails() {
     if (isLoading) {
         return <Spinner/>;
     }
+
+    document.title = "CampuFlix | " + movie.title;
 
     const imageUrl = getMovieImg(movie.poster_path, 500);
     return (

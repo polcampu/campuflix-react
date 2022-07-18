@@ -22,6 +22,7 @@ export function MoviesGrid({ search }) {
             setHasMore(data.total_pages > page);
             setIsLoading(false);
         });
+        document.title = "CampuFlix | " + search;
     }, [search, page]);
 
     if (!isLoading && movies.length === 0) {
